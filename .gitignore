@@ -1,8 +1,11 @@
 alertmanager
-alertmanager.yml
 alertmanager_version.txt
+alertmanager.yml
 amtool
 data/
+process-exporter
+process-exporter.yml
+profiles/
 prometheus
 prometheus.yml
 var/

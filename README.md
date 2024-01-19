@@ -24,6 +24,7 @@ http://localhost:9090/graph
 Check these metrics :
 
 ```
-go_memstats_heap_objects
-go_memstats_heap_inuse_bytes
+go_memstats_heap_objects{instance="localhost:9093"}
+go_memstats_heap_inuse_bytes{instance="localhost:9093"}
+namedprocess_namegroup_memory_bytes{groupname="alertmanager"}
 ```
