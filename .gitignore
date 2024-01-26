@@ -1,5 +1,6 @@
 alertmanager
-alertmanager_version.txt
+amtool_version.txt
+alertmanager_version
 alertmanager.yml
 amtool
 data/

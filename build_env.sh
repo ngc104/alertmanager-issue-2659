@@ -38,7 +38,7 @@ receivers:
   - name: 'mytest'
 EOF
 
-./alertmanager --version > alertmanager_version.txt
+./amtool --version > amtool_version.txt
 
 cat <<EOF > prometheus.yml
 global:
