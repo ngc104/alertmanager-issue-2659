@@ -8,4 +8,6 @@ process-exporter.yml
 profiles/
 prometheus
 prometheus.yml
+telegraf
+telegraf.conf
 var/
