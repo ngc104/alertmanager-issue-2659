@@ -9,7 +9,7 @@ mkdir -p var
 echo $! > var/telegraf.pid
 ./prometheus --storage.tsdb.path=var/data > var/prometheus.log 2>&1 &
 echo $! > var/prometheus.pid
-docker run -d --name alertmanager --rm -it -v $(pwd):/data -p ${ALERTMANAGERPORT}:${ALERTMANAGERPORT} "quay.io/prometheus/alertmanager:v${ALERTMANAGERVERSION}" --config.file="/data/alertmanager.yml" --data.retention=2h --web.listen-address=:${ALERTMANAGERPORT} --cluster.listen-address=""
+docker run -d --name alertmanager --rm -it -v $(pwd):/data -p ${ALERTMANAGERPORT}:${ALERTMANAGERPORT} "quay.io/prometheus/alertmanager:v${ALERTMANAGERVERSION}" --config.file="/data/alertmanager.yml" --data.retention="${DATARETENTION}" --web.listen-address=:${ALERTMANAGERPORT} --cluster.listen-address=""
 echo $! > var/alertmanager.pid
 
 echo "Telegraf: http://localhost:9273/metrics"
